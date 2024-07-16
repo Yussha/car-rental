@@ -1,6 +1,10 @@
+//Parts
+import Hero from "./Hero"
 
 export default function Home() {
     return (
-        <div>Home</div>
+        <div>
+            <Hero />
+        </div>
     )
 }

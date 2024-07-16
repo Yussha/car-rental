@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
 export default function Navlinks() {
     const [navlinkShow, setNavlinkShow] = useState(false);
