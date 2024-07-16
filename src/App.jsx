@@ -19,7 +19,7 @@ function App() {
     <main className="app">
       <Navbar />
       <Routes>
-        <Route index element={<Home />} />
+        <Route path='/car-rental' element={<Home />} />
         <Route path='cars' element={<Cars />} />
         <Route path='contact' element={<Contact />} />
       </Routes>

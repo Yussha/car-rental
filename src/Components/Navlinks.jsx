@@ -9,7 +9,7 @@ export default function Navlinks() {
         {
             id: 1,
             name: 'Home',
-            path: '/',
+            path: '/car-rental',
         },
         {
             id: 2,
