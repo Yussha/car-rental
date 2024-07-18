@@ -6,7 +6,6 @@ import { Routes, Route } from "react-router-dom";
 
 // Components
 import Navbar from "./Components/Navbar";
-import SocMedNavbar from "./Components/SocMedNavbar"
 
 // Pages
 import Home from './Pages/HomePage/Home'
@@ -38,7 +37,6 @@ function App() {
 
   return (
     <main className="app">
-      {screenWidth >= 361 && <SocMedNavbar />}
       <Navbar />
       <Routes>
         <Route path='/car-rental' element={<Home />} />

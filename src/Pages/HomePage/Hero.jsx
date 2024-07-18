@@ -1,32 +1,48 @@
-// CSS
 import styles from './home.module.css';
 
-// Bg
-import heroBg from '../../assets/HeroBG.jpg'
+import { BiSolidLike } from "react-icons/bi";
+import { FaArrowRightLong } from "react-icons/fa6";
+
+import SectionSearch from "./SectionSearch";
 
 export default function Hero() {
     return (
-        <section className={`${styles.customHero} pr-4 pl-4 pt-24 pb-24`}>
+        <section className={`${styles.customHero} h-auto lg:relative`}>
+            <div style={{ backgroundColor: '#fff' }} className='rounded-full bg-red-900 flex gap-x-2 p-3 mb-4 w-fit'>
+                <span style={{ color: '#fd7e14' }}>
+                    <BiSolidLike />
+                </span>
+                <p className='text-sm'>
+                    100% Trusted car rental platform in the World
+                </p>
+            </div>
 
-            <div >
-                <div className={`${styles.heroText}`}>
-                    <h2 className={`font-bold text-lg mb-4`}>Plan your trip now</h2>
-                    <h1 className={`font-bold text-5xl leading-tight mb-6`}>Explore the world with comfortable car</h1>
-                    <p className={`leading-7 w-72 mb-4`}>Embark on unforgettable adventures and discover the world in unparalleled comfort and style with our fleet of exceptionally comfortable cars.</p>
+            <div className={`heroText lg:grid lg:grid-cols-2`}>
+                <div>
+                    <h1 className='font-bold text-4xl mb-4 xl:text-6xl'>
+                        <span style={{ color: '#fd7e14' }}>Find Your Best</span>
+                        <br />
+                        Dream Car for Rental
+                    </h1>
+
+                    <p style={{ color: '#676767', fontWeight: '500', lineHeight: '23px' }} className='text-sm mb-8 lg:text-left '>
+                        Experience the ultimate in comfort, performance, and sophistication with our luxury car rentals. From sleek sedans and stylish coupes to spacious SUVs and elegant convertibles, we offer a range of premium vehicles to suit your preferences and lifestyle.
+                    </p>
+
+                    <button className={`${styles.viewCarsBtn} flex items-center justify-center gap-x-2`}>
+                        View all Cars
+                        <span>
+                            <FaArrowRightLong />
+                        </span>
+                    </button>
                 </div>
 
-                <div className={``}>
-                    <button className={`${styles.chooseBtn} block mb-4 p-1 pl-4 pr-4`}>Choose a Car</button>
-                    <button className={`${styles.getAppBtn} mb-10 p-1 pl-4 pr-4`}>Get the App</button>
+                <div className='hidden lg:block'>
+                    <img className='max-w-full w-auto' src="https://dreamsrent.dreamstechnologies.com/html/assets/img/car-right.png" alt="" />
                 </div>
             </div>
 
-            <div className='relative bg-blue-900'>
-                <img className='absolute z-30 w-72 left-8' src="https://www.madebydesignesia.com/themes/rentaly/images/misc/car-2.png" alt="" />
-
-                <img className={`${styles.fancyBorderHero} absolute top-10 z-10 w-60 right-0`} src={heroBg} alt="" />
-            </div>
-
+            <SectionSearch />
         </section>
     )
 }

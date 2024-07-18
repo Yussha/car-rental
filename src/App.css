@@ -2,43 +2,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
-    --bg-dark: #121212;
-    --body-font-ccolor: #404040;
-    --title-font: "Outfit", sans-serif;
-    --body-font: "Inter", sans-serif;
-    --green-color: #1ECB15;
-    --gray-color: #acacac;
-    --dark-green-color: #179510;
-    --white-color: #F4F4F4;
+    --bg-body: #fff;
+    --orange-color: #fd7e14;
+    --black: #201F1D;
+}
+
+.app {
+    position: relative;
 }
 
 /* Navbar */
 nav {
-    background-color: var(--white-color);
+    background-color: var(--bg-body);
+    box-shadow: -1px -1px 11px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -1px -1px 11px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px -1px 11px -5px rgba(0, 0, 0, 0.75);
 }
 
-.custom-socmedNav {
-    background-color: var(--bg-dark);
-    color: var(--white-color);
+.navLinks {
+    background-color: var(--black);
+    box-shadow: 4px 4px 11px -3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 4px 11px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 11px -3px rgba(0, 0, 0, 0.75);
+    z-index: 99999;
 }
 
-.custom-ul {
-    background-color: var(--white-color);
-    top: 72px;
-    overflow: hidden;
-    height: 0;
-    transition: height 0.3s ease-in-out;
+.links {
+    color: var(--bg-body);
+    font-weight: 600;
 }
 
-.custom-ul.open {
-    height: 180px;
+.menu {
+    color: var(--orange-color);
+    font-size: 2rem;
 }
 
-.custom-linkName {
-    color: var(--bg-dark);
-    font-weight: 700;
+.menuHeader {
+    background-color: var(--bg-body);
+    color: var(--back);
 }
 
-.menuBtn {
-    color: var(--bg-dark);
+.navHeader h1 span {
+    color: var(--orange-color);
+}
+
+.closeBtn {
+    color: var(--orange-color);
+}
+
+@media (min-width: 1024px) {
+    .links {
+        color: var(--back);
+        font-weight: 600;
+    }
 }

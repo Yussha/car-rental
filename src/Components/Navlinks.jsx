@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { useState } from "react";
 
-export default function Navlinks() {
-    const [navlinkShow, setNavlinkShow] = useState(false);
+import { IoClose } from "react-icons/io5";
 
+export default function Navlinks({ toggleNavLinks, showNavlinks }) {
     const navlinks = [
         {
             id: 1,
@@ -23,24 +21,23 @@ export default function Navlinks() {
         },
     ];
 
-    const handleShowNavLinks = () => {
-        setNavlinkShow(!navlinkShow);
-    };
-
     return (
-        <div className="flex justify-between items-center">
-            <div>
-                <img src="https://www.madebydesignesia.com/themes/rentaly/images/logo.png" alt="" />
+        <div className={`navLinks fixed w-60 top-0 bottom-0 ease-in duration-300  ${showNavlinks ? 'left-0' : '-left-96'} lg:static lg:bg-transparent lg:shadow-none`}>
+            <div className={`menuHeader flex items-center justify-between p-4 lg:hidden`}>
+                <div className={`navHeader flex items-center gap-x-2`}>
+                    <img src="https://dreamsrent.dreamstechnologies.com/html/assets/img/logo-small.png" alt="" />
+                    <h1 className={`font-bold text-lg`}><span>DREAMS</span> RENT</h1>
+                </div>
+                <button onClick={toggleNavLinks} className={`closeBtn text-xl`} ><IoClose /></button>
             </div>
-            <ul className={`custom-ul absolute left-0 right-0 flex flex-col justify-center items-center gap-y-4 ${navlinkShow ? 'open' : ''}`}>
+            <ul className="p-4 lg:flex lg:items-center lg:justify-end lg:gap-x-4 lg:p-0">
                 {navlinks.map(navlink => (
-                    <li key={navlink.id}>
-                        <Link to={navlink.path} className="custom-linkName">{navlink.name}</Link>
+                    <li key={navlink.id} className="pb-4 lg:p-0">
+                        <Link className="links" to={navlink.path}>{navlink.name}</Link>
                     </li>
                 ))}
             </ul>
-
-            <button onClick={handleShowNavLinks} className="menuBtn text-lg"><GiHamburgerMenu /></button>
         </div>
+
     );
 }

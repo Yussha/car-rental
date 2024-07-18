@@ -1,14 +1,29 @@
 //Components
 import Navlinks from "./Navlinks"
 
-import { useSelector } from 'react-redux'
+import { HiOutlineMenuAlt2 } from "react-icons/hi";
+
+import { useState } from "react";
 
 export default function Navbar() {
-    const screenWidth = useSelector(state => state.trackScreenWidth.screenWidth);
+    const [showNavlinks, setShowNavlinks] = useState(false);
+
+    const toggleNavLinks = () => {
+        setShowNavlinks(!showNavlinks)
+    }
 
     return (
-        <nav className={`fixed pr-4 pl-4 pt-2 pb-2 left-0 right-0 z-40 ${screenWidth >= 361 ? 'top-8' : 'top-0'}`}>
-            <Navlinks />
+        <nav className={`fixed left-0 right-0 grid grid-cols-2 p-4 sm:flex sm:gap-x-8 sm:items-center lg:justify-between lg:z-50`}>
+            <button onClick={toggleNavLinks} className="menu sm:text-4xl lg:hidden"><HiOutlineMenuAlt2 /></button>
+
+            <div>
+                <div className={`navHeader hidden sm:flex sm:items-center sm:gap-x-2`}>
+                    <img src="https://dreamsrent.dreamstechnologies.com/html/assets/img/logo-small.png" alt="" />
+                    <h1 className={`font-bold text-lg sm:text-2xl`}><span>DREAMS</span> RENT</h1>
+                </div>
+                <img className="sm:hidden" src="https://dreamsrent.dreamstechnologies.com/html/assets/img/logo-small.png" alt="" />
+            </div>
+            <Navlinks toggleNavLinks={toggleNavLinks} showNavlinks={showNavlinks} />
         </nav>
     )
 }
