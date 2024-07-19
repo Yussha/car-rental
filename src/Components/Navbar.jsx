@@ -16,7 +16,7 @@ export default function Navbar() {
         <nav className={`fixed left-0 right-0 grid grid-cols-2 p-4 sm:flex sm:gap-x-8 sm:items-center lg:justify-between lg:z-50`}>
             <button onClick={toggleNavLinks} className="menu sm:text-4xl lg:hidden"><HiOutlineMenuAlt2 /></button>
 
-            <div>
+            <div style={{ cursor: 'pointer' }}>
                 <div className={`navHeader hidden sm:flex sm:items-center sm:gap-x-2`}>
                     <img src="https://dreamsrent.dreamstechnologies.com/html/assets/img/logo-small.png" alt="" />
                     <h1 className={`font-bold text-lg sm:text-2xl`}><span>DREAMS</span> RENT</h1>

@@ -7,7 +7,7 @@ import SectionSearch from "./SectionSearch";
 
 export default function Hero() {
     return (
-        <section className={`${styles.customHero} h-auto lg:relative`}>
+        <section className={`${styles.customHero} h-auto lg:relative pt-28 pb-24 h-auto pl-3 pr-3 lg:pt-44 xl:pl-20 xl:pr-20`}>
             <div style={{ backgroundColor: '#fff' }} className='rounded-full bg-red-900 flex gap-x-2 p-3 mb-4 w-fit'>
                 <span style={{ color: '#fd7e14' }}>
                     <BiSolidLike />

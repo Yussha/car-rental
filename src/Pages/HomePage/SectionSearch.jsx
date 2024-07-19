@@ -13,7 +13,7 @@ export default function SectionSearch() {
     const [startDateReturn, setStartDateReturn] = useState(new Date());
 
     return (
-        <section className={`${styles.customSectionSearh} mt-10 rounded-md p-4 lg:absolute lg:-bottom-44 lg:left-8 lg:z-10 xl:-bottom-44 `}>
+        <section className={`${styles.customSectionSearh} mt-10 rounded-md p-4 lg:absolute lg:-bottom-20 lg:left-8 lg:z-10 xl:-bottom-20 `}>
             <form action="" >
                 <ul className="md:grid md:grid-cols-2 md:gap-x-4 lg:grid-cols-3 lg:gap-x-2">
                     <li className="mb-4">

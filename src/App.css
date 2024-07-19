@@ -11,6 +11,19 @@
     position: relative;
 }
 
+.customSubtitle {
+    color: var(--orange-color);
+    font-weight: bold;
+    background-color: #F2F7F6;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.customSectionTitle {
+    color: var(--black);
+    font-weight: bold;
+}
+
 /* Navbar */
 nav {
     background-color: var(--bg-body);

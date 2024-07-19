@@ -6,7 +6,7 @@
 }
 
 /* home section */
-.customHome {
+.customHero {
     background-color: #F2F7F6;
 }
 
@@ -68,8 +68,29 @@
     font-weight: bold;
 }
 
+/* About section */
+.customAbout {
+    background-image: url('../../assets/AboutBg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    max-width: 100%;
+    background-attachment: fixed;
+    color: white;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+.customCountInfoDetails {
+    background-color: var(--back);
+}
+
+
 @media (min-width: 1024px) {
-    .customHome {
+    .customHero {
         background-image: url('../../assets/HeroBg.jpg');
         background-size: cover;
         background-repeat: no-repeat;
