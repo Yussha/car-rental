@@ -1,0 +1,50 @@
+/* vechile fleet */
+.swiper {
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.swiper-slide {
+    border-radius: 5px !important;
+    border: 1px solid var(--body-color) !important;
+    padding: 10px;
+}
+
+.swiper-slide div img {
+    border-radius: 5px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 15px !important;
+    color: #201F1D;
+    font-weight: bolder;
+}
+
+.swiper-button-prev {
+    left: 1px !important;
+    background-color: #fff;
+    border: 1px solid #676767;
+    border-radius: 50%;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+}
+
+.swiper-button-next {
+    right: 1px !important;
+    background-color: #fff;
+    border: 1px solid #676767;
+    border-radius: 50%;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+}
+
+/* @media (min-width: 640px) {
+    .swiper {
+        width: 90%;
+    }
+} */

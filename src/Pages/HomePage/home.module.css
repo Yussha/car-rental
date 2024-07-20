@@ -88,6 +88,14 @@
     background-color: var(--back);
 }
 
+/* vehicle fleet */
+.rentNowBtn {
+    color: var(--bg-body);
+    background-color: var(--orange-color);
+    font-weight: bold;
+    width: fit-content;
+    padding: 3px 10px 3px 10px;
+}
 
 @media (min-width: 1024px) {
     .customHero {

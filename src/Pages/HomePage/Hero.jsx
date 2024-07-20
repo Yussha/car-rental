@@ -5,6 +5,9 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 import SectionSearch from "./SectionSearch";
 
+// img
+import heroCarBg from '../../assets/HeroCarBg.png'
+
 export default function Hero() {
     return (
         <section className={`${styles.customHero} h-auto lg:relative pt-28 pb-24 h-auto pl-3 pr-3 lg:pt-44 xl:pl-20 xl:pr-20`}>
@@ -38,7 +41,7 @@ export default function Hero() {
                 </div>
 
                 <div className='hidden lg:block'>
-                    <img className='max-w-full w-auto' src="https://dreamsrent.dreamstechnologies.com/html/assets/img/car-right.png" alt="" />
+                    <img className='max-w-full w-auto' src={heroCarBg} alt="" />
                 </div>
             </div>
 
