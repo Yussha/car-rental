@@ -64,6 +64,12 @@ nav {
     color: var(--orange-color);
 }
 
+/* footer */
+.customFooter {
+    background-color: var(--black);
+    color: var(--bg-body);
+}
+
 @media (min-width: 1024px) {
     .links {
         color: var(--back);

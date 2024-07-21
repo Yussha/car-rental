@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 
 // Components
 import Navbar from "./Components/Navbar";
+import Footer from './Components/Footer';
 
 // Pages
 import Home from './Pages/HomePage/Home'
@@ -43,6 +44,7 @@ function App() {
         <Route path='cars' element={<Cars />} />
         <Route path='contact' element={<Contact />} />
       </Routes>
+      <Footer />
     </main>
   )
 }

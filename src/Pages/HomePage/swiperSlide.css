@@ -43,8 +43,34 @@
     padding: 10px;
 }
 
-/* @media (min-width: 640px) {
-    .swiper {
-        width: 90%;
+.logos {
+    background-color: #201F1D;
+    overflow: hidden;
+    display: flex;
+}
+
+.dividedLine {
+    background-color: #fd7e14;
+    width: 100px;
+    height: 3px;
+}
+
+.logos-slide {
+    animation: 8s slide infinite linear;
+}
+
+.logos-slide span {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fd7e14;
+}
+
+@keyframes slide {
+    form {
+        transform: translateX(0);
     }
-} */
+
+    to {
+        transform: translateX(-100%);
+    }
+}
