@@ -12,30 +12,10 @@ import Footer from './Components/Footer';
 import Home from './Pages/HomePage/Home'
 import Cars from './Pages/CarsPage/Cars'
 import Contact from './Pages/ContactPage/Contact';
+import Rental from './Pages/RentalPage/Rental';
 
-//hooks
-import { useEffect } from 'react';
-
-// redux toolkit
-import { useSelector, useDispatch } from 'react-redux'
-import { trackWidth } from './ReduxStore/trackScreenWidthSlice';
 
 function App() {
-  const screenWidth = useSelector(state => state.trackScreenWidth.screenWidth);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    const trackChanges = () => {
-      dispatch(trackWidth())
-    }
-    window.addEventListener('resize', trackChanges)
-
-    //clean up function
-    return () => {
-      window.removeEventListener('resize', trackChanges)
-    }
-  }, [screenWidth])
-
   return (
     <main className="app">
       <Navbar />
@@ -43,6 +23,7 @@ function App() {
         <Route path='/car-rental' element={<Home />} />
         <Route path='cars' element={<Cars />} />
         <Route path='contact' element={<Contact />} />
+        <Route path='/rental' element={<Rental />} />
       </Routes>
       <Footer />
     </main>

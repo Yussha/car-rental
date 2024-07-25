@@ -17,11 +17,19 @@ import { FaCarAlt } from "react-icons/fa";
 
 import { cars } from '../../Data/cars.js'
 
+import { Link } from "react-router-dom";
+
+import { useDispatch } from 'react-redux'
+import { rentNowBtn } from "../../ReduxStore/RentalSlice.jsx";
+
 export default function VehicleFleet() {
-    /**
-     * TODO: make a swiper slide of the vehicles and show only 6 slides of the vehicles
-     */
     const displayCars = cars.slice(0, 6);
+
+    const dispatch = useDispatch();
+
+    const handleViewDetailCar = (item) => {
+        dispatch(rentNowBtn(item))
+    }
 
     return (
         <section className={`h-auto mt-20 pb-24 h-auto pl-3 pr-3 xl:pl-20 xl:pr-20 lg:mt-32`}>
@@ -100,7 +108,9 @@ export default function VehicleFleet() {
                             </div>
 
                             <div className="flex items-center">
-                                <button className={`${styles.rentNowBtn} rounded-md `}>Rent Now</button>
+                                <Link to='/rental'>
+                                    <button onClick={() => handleViewDetailCar(car)} className={`${styles.rentNowBtn} rounded-md `}>Rent Now</button>
+                                </Link>
                             </div>
                         </div>
                     </SwiperSlide>

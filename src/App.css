@@ -24,6 +24,20 @@
     font-weight: bold;
 }
 
+.customOverlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+/* Pages Header */
+.customPagesHeader {
+    background-image: url('./assets/AboutBg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--bg-body);
+}
+
 /* Navbar */
 nav {
     background-color: var(--bg-body);

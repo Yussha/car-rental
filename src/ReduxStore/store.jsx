@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
-import trackScreenWidthChanges from './trackScreenWidthSlice'
 import questionsLists from './questionListsSlice'
+import rentalCarFunctions from './RentalSlice'
 
 export default configureStore({
     reducer: {
-        trackScreenWidth: trackScreenWidthChanges.reducer,
-        questionsListsReducer: questionsLists.reducer
+        questionsListsReducer: questionsLists.reducer,
+        rentalCarFunctionsReducer: rentalCarFunctions.reducer
     },
 })
