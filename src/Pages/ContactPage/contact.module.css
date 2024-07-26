@@ -1,0 +1,57 @@
+.contactInputContainer input {
+    border: 1px solid #676767;
+    color: #676767;
+    outline-color: #676767;
+    transition: .3s ease-in-out;
+}
+
+.contactInputContainer input:focus {
+    outline-color: #fd7e14;
+    background-color: rgba(253, 126, 20, 0.2);
+}
+
+.contactInputContainer input::placeholder {
+    color: #676767;
+}
+
+.contactTextArea {
+    border: 1px solid #676767;
+    color: #676767;
+    resize: none;
+    height: 200px;
+}
+
+.contactTextArea:focus {
+    outline-color: #fd7e14;
+    background-color: rgba(253, 126, 20, 0.2);
+}
+
+.contactTextArea::placeholder {
+    color: #676767;
+}
+
+.sendMessageBtn {
+    color: var(--bg-body);
+    background-color: var(--orange-color);
+    font-weight: bold;
+    width: fit-content;
+    padding: 3px 10px 3px 10px;
+}
+
+.socmedContactCard {
+    border: 1px solid #676767;
+    box-shadow: -1px -1px 11px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -1px -1px 11px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px -1px 11px -5px rgba(0, 0, 0, 0.75);
+    z-index: 99999;
+}
+
+.contactList li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contactList li span {
+    color: #fd7e14;
+}
