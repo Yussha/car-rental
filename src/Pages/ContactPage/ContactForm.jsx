@@ -1,6 +1,11 @@
 import styles from './contact.module.css';
 
-export default function ContactForm() {
+export default function ContactForm({ setIsLoginFormOpen, isLoginFormOpen }) {
+    const handleSendMessageBtn = (e) => {
+        e.preventDefault()
+
+        setIsLoginFormOpen(true)
+    }
     return (
         <form action="" className="p-2 lg:col-span-2">
             <div className="pr-5 mb-4">
@@ -14,7 +19,7 @@ export default function ContactForm() {
                 <textarea placeholder="Your Message" className={`${styles.contactTextArea} p-2 rounded-md md:col-span-4`}></textarea>
 
                 <div>
-                    <button className={`${styles.sendMessageBtn} rounded-md`}>Send Message</button>
+                    <button onClick={(e) => handleSendMessageBtn(e)} className={`${styles.sendMessageBtn} rounded-md`}>Send Message</button>
                 </div>
             </div>
         </form>

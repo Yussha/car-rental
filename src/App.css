@@ -29,6 +29,12 @@
     width: 100%;
 }
 
+.customOverlayGlobal {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    z-index: 999999;
+}
+
 /* Pages Header */
 .customPagesHeader {
     background-image: url('./assets/AboutBg.jpg');
@@ -76,6 +82,53 @@ nav {
 
 .closeBtn {
     color: var(--orange-color);
+}
+
+/* login form */
+.customLoginCard {
+    background-color: var(--bg-body);
+    box-shadow: 4px 4px 11px -3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 4px 11px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 11px -3px rgba(0, 0, 0, 0.75);
+    z-index: 999999;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+    transition: .3s ease-in-out;
+}
+
+.customLoginCard.open {
+    visibility: visible;
+    top: 40%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.customLoginForm input {
+    border: 1px solid #676767;
+    color: #676767;
+    outline-color: #676767;
+    transition: .3s ease-in-out;
+}
+
+.customLoginForm input:focus {
+    outline-color: #fd7e14;
+    background-color: rgba(253, 126, 20, 0.2);
+}
+
+.customLoginForm input::placeholder {
+    color: #676767;
+}
+
+.loginBtn {
+    background-color: var(--orange-color);
+    color: var(--bg-body);
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.signUpBtn {
+    color: var(--orange-color);
+    text-decoration: underline;
 }
 
 /* footer */

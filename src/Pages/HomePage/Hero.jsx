@@ -8,6 +8,9 @@ import SectionSearch from "./SectionSearch";
 // img
 import heroCarBg from '../../assets/HeroCarBg.png'
 
+import { Link } from "react-router-dom";
+
+
 export default function Hero() {
     return (
         <section className={`${styles.customHero} h-auto lg:relative pt-28 pb-24 h-auto pl-3 pr-3 lg:pt-44 xl:pl-20 xl:pr-20`}>
@@ -32,12 +35,15 @@ export default function Hero() {
                         Experience the ultimate in comfort, performance, and sophistication with our luxury car rentals. From sleek sedans and stylish coupes to spacious SUVs and elegant convertibles, we offer a range of premium vehicles to suit your preferences and lifestyle.
                     </p>
 
-                    <button className={`${styles.viewCarsBtn} flex items-center justify-center gap-x-2`}>
-                        View all Cars
-                        <span>
-                            <FaArrowRightLong />
-                        </span>
-                    </button>
+                    <Link to='/cars'>
+                        <button className={`${styles.viewCarsBtn} flex items-center justify-center gap-x-2`}>
+                            View all Cars
+                            <span>
+                                <FaArrowRightLong />
+                            </span>
+                        </button>
+                    </Link>
+
                 </div>
 
                 <div className='hidden lg:block'>

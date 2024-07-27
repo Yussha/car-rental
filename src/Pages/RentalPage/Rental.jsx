@@ -7,7 +7,7 @@ import styles from './rental.module.css'
 
 import { useSelector } from 'react-redux'
 
-export default function Rental() {
+export default function Rental({ setIsLoginFormOpen }) {
     const carItem = useSelector(state => state.rentalCarFunctionsReducer.carItemObj)
 
     return (
@@ -86,7 +86,7 @@ export default function Rental() {
                         </div>
 
                         {/* form */}
-                        <RentalForm />
+                        <RentalForm setIsLoginFormOpen={setIsLoginFormOpen} />
 
                     </div>
 

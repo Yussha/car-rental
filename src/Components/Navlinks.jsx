@@ -33,7 +33,7 @@ export default function Navlinks({ toggleNavLinks, showNavlinks }) {
                 </div>
                 <button onClick={toggleNavLinks} className={`closeBtn text-xl`} ><IoClose /></button>
             </div>
-            <ul className="p-4 lg:flex lg:items-center lg:justify-end lg:gap-x-4 lg:p-0">
+            <ul className="p-4 lg:flex lg:items-center lg:justify-end lg:gap-x-12 lg:p-0">
                 {navlinks.map(navlink => (
                     <li key={navlink.id} className="pb-4 lg:p-0">
                         <Link className="links" to={navlink.path}>{navlink.name}</Link>

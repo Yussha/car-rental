@@ -8,6 +8,8 @@ import { CiSearch } from "react-icons/ci";
 
 import styles from './home.module.css';
 
+import { Link } from "react-router-dom";
+
 export default function SectionSearch() {
     const [startDatePickup, setStartDatePickup] = useState(new Date());
     const [startDateReturn, setStartDateReturn] = useState(new Date());
@@ -69,10 +71,13 @@ export default function SectionSearch() {
                     </li>
                 </ul>
 
-                <div className={`w-auto `}>
-                    <button className={`${styles.customSearchBtn} w-full rounded-md pt-2 pb-2 pl-8 pr-8 flex
+                <Link to='/cars'>
+                    <div className={`w-auto `}>
+                        <button className={`${styles.customSearchBtn} w-full rounded-md pt-2 pb-2 pl-8 pr-8 flex
                      justify-center items-center gap-x-2`}><CiSearch /> Search</button>
-                </div>
+                    </div>
+                </Link>
+
             </form>
         </section>
     )

@@ -4,13 +4,18 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import { CiLocationOn } from "react-icons/ci";
 import { CiCalendar } from "react-icons/ci";
-import { CiSearch } from "react-icons/ci";
 
 import styles from '../HomePage/home.module.css'
 
-export default function RentalForm() {
+export default function RentalForm({ setIsLoginFormOpen }) {
     const [startDatePickup, setStartDatePickup] = useState(new Date());
     const [startDateReturn, setStartDateReturn] = useState(new Date());
+
+    const handleBookNow = (e) => {
+        e.preventDefault()
+
+        setIsLoginFormOpen(true)
+    }
 
     return (
         <section className={`${styles.customSectionSearh} mt-4 mb-10 rounded-md p-4 w-full`}>
@@ -70,7 +75,7 @@ export default function RentalForm() {
                 </ul>
 
                 <div className={`w-auto `}>
-                    <button className={`${styles.customSearchBtn} w-full rounded-md pt-2 pb-2 pl-8 pr-8 flex
+                    <button onClick={(e) => handleBookNow(e)} className={`${styles.customSearchBtn} w-full rounded-md pt-2 pb-2 pl-8 pr-8 flex
                      justify-center items-center gap-x-2`}> Book Now</button>
                 </div>
             </form>
