@@ -12,7 +12,7 @@ import store from './ReduxStore/store.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/car-rental'>
       <Provider store={store}>
         <App />
       </Provider>

@@ -28,7 +28,7 @@ export default function Navbar({ setIsLoginFormOpen }) {
             <div className="flex gap-x-4 lg:hidden">
                 <button onClick={toggleNavLinks} className="menu sm:text-4xl lg:hidden"><HiOutlineMenuAlt2 /></button>
 
-                <Link to='/car-rental'>
+                <Link to='/'>
                     <div className="flex items-center gap-x-2 lg:hidden">
                         <img src="https://dreamsrent.dreamstechnologies.com/html/assets/img/logo-small.png" alt="" />
                         <h1 className={`font-bold text-lg sm:text-2xl hidden sm:block`}><span style={{ color: "#fd7e14" }}>DREAMS</span>RENT</h1>
@@ -38,7 +38,7 @@ export default function Navbar({ setIsLoginFormOpen }) {
 
             </div>
 
-            <Link to='/car-rental'>
+            <Link to='/'>
                 <div style={{ cursor: 'pointer' }} className="hidden lg:block">
                     <div className={`navHeader hidden sm:flex sm:items-center sm:gap-x-2`}>
                         <img src={logo} alt="" />
